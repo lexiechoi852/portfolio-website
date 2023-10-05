@@ -12,6 +12,7 @@ export default function Profile() {
     >
       <div className="flex items-center justify-center">
         <Image
+          priority
           className="h-full w-72 rounded-full lg:h-[400px] lg:w-[400px]"
           src="/lexie-choi.png"
           alt="Profile Picture"
