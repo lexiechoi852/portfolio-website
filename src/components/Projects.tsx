@@ -22,7 +22,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative flex h-[calc(96dvh)] flex-col gap-10 p-[4vh]"
+      className="relative flex min-h-[calc(96dvh)] flex-col gap-10 p-[4vh]"
     >
       <h4 className="mb-2 text-center text-5xl font-bold text-gray-700">
         Projects

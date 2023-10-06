@@ -8,7 +8,7 @@ export default function Profile() {
   return (
     <section
       id="profile"
-      className="relative flex h-[calc(90dvh)] flex-col justify-center gap-20 lg:flex-row"
+      className="relative flex min-h-[calc(90dvh)] flex-col justify-center gap-20 lg:flex-row"
     >
       <div className="flex items-center justify-center">
         <Image

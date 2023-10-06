@@ -22,11 +22,11 @@ const experiences = [
 ];
 export default function Experience() {
   return (
-    <section id="experience" className="relative h-[calc(96dvh)] p-[4vh]">
+    <section id="experience" className="relative min-h-[calc(96dvh)] p-[4vh]">
       <h4 className="mb-2 text-center text-5xl font-bold text-gray-700">
         Experience
       </h4>
-      <div className="flex h-full flex-col items-center justify-center gap-20">
+      <div className="flex flex-col items-center justify-center gap-20">
         {experiences.map((experience) => (
           <div
             key={experience.title}
