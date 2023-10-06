@@ -22,7 +22,7 @@ const experiences = [
 ];
 export default function Experience() {
   return (
-    <section id="experience" className="relative h-[96vh] p-[4vh]">
+    <section id="experience" className="relative h-[calc(96dvh)] p-[4vh]">
       <h4 className="mb-2 text-center text-5xl font-bold text-gray-700">
         Experience
       </h4>

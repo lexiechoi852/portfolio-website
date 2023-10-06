@@ -4,7 +4,7 @@ import HamburgerMenu from "./HamburgerMenu";
 
 export default function Navbar() {
   return (
-    <header className="flex h-[10vh] items-center text-lg font-bold text-gray-700">
+    <header className="flex h-[10dvh] items-center text-lg font-bold text-gray-700">
       <Link href="/" className="text-2xl">
         Lexie Choi
       </Link>
