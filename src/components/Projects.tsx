@@ -24,9 +24,9 @@ export default function Projects() {
       id="projects"
       className="relative flex min-h-[calc(96dvh)] flex-col gap-10 p-[4vh]"
     >
-      <h4 className="mb-2 text-center text-5xl font-bold text-gray-700">
+      <h2 className="mb-2 text-center text-5xl font-bold text-gray-700">
         Projects
-      </h4>
+      </h2>
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 xl:grid-cols-3">
         {projects.map((project) => (
           <div

@@ -9,8 +9,12 @@ export default function Navbar() {
         Lexie Choi
       </Link>
       <nav className="ml-auto hidden max-w-[200px] flex-1 justify-between lg:flex">
-        <Link href="#experience">Experience</Link>
-        <Link href="#projects">Projects</Link>
+        <Link href="#experience" aria-label="experience section">
+          Experience
+        </Link>
+        <Link href="#projects" aria-label="projects section">
+          Projects
+        </Link>
       </nav>
       <nav className="flex flex-1 justify-end lg:hidden">
         <HamburgerMenu />
