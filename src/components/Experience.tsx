@@ -34,9 +34,9 @@ export default function Experience() {
           >
             <div className="min-w-[150px]">{experience.duration}</div>
             <div className="flex flex-col lg:ml-20">
-              <h5 className="text-2xl font-bold text-gray-800">
+              <h3 className="text-2xl font-bold text-gray-800">
                 {experience.title}
-              </h5>
+              </h3>
               <div className="text-xl font-semibold text-gray-800">
                 {experience.companyName}
               </div>
