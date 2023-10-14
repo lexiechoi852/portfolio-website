@@ -43,9 +43,9 @@ export default function Projects() {
             />
             <div className="flex h-full flex-col gap-2 px-5 pb-3 pt-5">
               <div className="flex flex-wrap items-end gap-2">
-                <h5 className="text-2xl font-bold tracking-tight text-gray-900">
+                <h3 className="text-2xl font-bold tracking-tight text-gray-900">
                   {project.name}
-                </h5>
+                </h3>
                 {project.workInProgress ? (
                   <span>(Work In Progress)</span>
                 ) : null}
