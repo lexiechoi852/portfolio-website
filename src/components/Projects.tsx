@@ -1,21 +1,32 @@
 import React from "react";
 import Image from "next/image";
+import { Project } from "@/types/project";
 import ExternalLinkButton from "./ExternalLinkButton";
 import Tag from "./Tag";
 import Navigation from "./Navigation";
 
-const projects = [
+const projects: Project[] = [
   {
     name: "Easy Trip",
     image: "/easy-trip-screenshot.png",
     description:
       "Trip planning website allow you plan your trip in Toronto. By adding attractions, arranging your schedule using calendar view.",
-    liveSite: "https://easy-trip-next.vercel.app",
+    liveSite: "https://easy-trip.lexiechoi.com",
     backendGithubUrl: "https://github.com/lexiechoi852/easy-trip-nest",
     frontendGithubUrl: "https://github.com/lexiechoi852/easy-trip-next",
-    githubUrl: "",
     workInProgress: true,
     stacks: ["Next.js", "Redux", "Nest.js"],
+  },
+  {
+    name: "Mail Me",
+    image: "/mail-me-screenshot.png",
+    description:
+      "Allows users to write an email to their future self. By answering predefine questions and input email address, an AI generated email will be sent to your email.",
+    liveSite: "https://mail-me.lexiechoi.com",
+    backendGithubUrl: "https://github.com/cantek-international/mail-me-express",
+    frontendGithubUrl: "https://github.com/cantek-international/mailme",
+    workInProgress: false,
+    stacks: ["Next.js", "TailwindCSS", "Express.js"],
   },
 ];
 export default function Projects() {
@@ -56,28 +67,30 @@ export default function Projects() {
                 ))}
               </div>
               <p className="text-gray-700">{project.description}</p>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {project.liveSite && (
-                  <ExternalLinkButton
-                    name="Live Demo"
-                    href={project.liveSite}
-                  />
-                )}
-                {project.frontendGithubUrl && (
-                  <ExternalLinkButton
-                    name="Frontend"
-                    href={project.frontendGithubUrl}
-                  />
-                )}
-                {project.backendGithubUrl && (
-                  <ExternalLinkButton
-                    name="Backend"
-                    href={project.backendGithubUrl}
-                  />
-                )}
-                {project.githubUrl && (
-                  <ExternalLinkButton name="Code" href={project.githubUrl} />
-                )}
+              <div className="flex h-full items-end">
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {project.liveSite && (
+                    <ExternalLinkButton
+                      name="Live Demo"
+                      href={project.liveSite}
+                    />
+                  )}
+                  {project.frontendGithubUrl && (
+                    <ExternalLinkButton
+                      name="Frontend"
+                      href={project.frontendGithubUrl}
+                    />
+                  )}
+                  {project.backendGithubUrl && (
+                    <ExternalLinkButton
+                      name="Backend"
+                      href={project.backendGithubUrl}
+                    />
+                  )}
+                  {project.githubUrl && (
+                    <ExternalLinkButton name="Code" href={project.githubUrl} />
+                  )}
+                </div>
               </div>
             </div>
           </div>
