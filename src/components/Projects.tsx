@@ -50,13 +50,13 @@ export default function Projects() {
                   <span>(Work In Progress)</span>
                 ) : null}
               </div>
-              <p className="text-gray-700">{project.description}</p>
-              <div className="my-2 flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2">
                 {project.stacks.map((stack) => (
                   <Tag key={stack} stack={stack} component="projects" />
                 ))}
               </div>
-              <div className="flex flex-wrap">
+              <p className="text-gray-700">{project.description}</p>
+              <div className="mt-2 flex flex-wrap gap-2">
                 {project.liveSite && (
                   <ExternalLinkButton
                     name="Live Demo"
