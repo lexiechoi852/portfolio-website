@@ -12,10 +12,10 @@ const projects: Project[] = [
     description:
       "Trip planning website allow you plan your trip in Toronto. By adding attractions, arranging your schedule using calendar view.",
     liveSite: "https://easy-trip.lexiechoi.com",
-    backendGithubUrl: "https://github.com/lexiechoi852/easy-trip-nest",
+    backendGithubUrl: "https://github.com/lexiechoi852/easy-trip-laravel",
     frontendGithubUrl: "https://github.com/lexiechoi852/easy-trip-next",
     workInProgress: true,
-    stacks: ["Next.js", "Redux", "Nest.js"],
+    stacks: ["Next.js", "Redux", "Laravel"],
   },
   {
     name: "Mail Me",
