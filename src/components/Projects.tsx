@@ -22,7 +22,7 @@ const projects: Project[] = [
     image: "/mail-me-screenshot.png",
     description:
       "Allows users to write an email to their future self. By answering predefine questions and input email address, an AI generated email will be sent to your email.",
-    liveSite: "https://mail-me.lexiechoi.com",
+    // liveSite: "https://mail-me.lexiechoi.com",
     backendGithubUrl: "https://github.com/cantek-international/mail-me-express",
     frontendGithubUrl: "https://github.com/cantek-international/mailme",
     workInProgress: false,

@@ -2,7 +2,7 @@ export type Project = {
   name: string;
   image: string;
   description: string;
-  liveSite: string;
+  liveSite?: string;
   backendGithubUrl?: string;
   frontendGithubUrl?: string;
   githubUrl?: string;
