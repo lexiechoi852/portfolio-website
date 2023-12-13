@@ -10,11 +10,11 @@ const projects: Project[] = [
     name: "Easy Trip",
     image: "/easy-trip-screenshot.png",
     description:
-      "Trip planning website allow you plan your trip in Toronto. By adding attractions, arranging your schedule using calendar view.",
+      "Trip planning website allow you plan your trip in Toronto. By adding attractions, arranging your schedule using calendar view, users can get an itinerary with travel time estimation and routes information.",
     liveSite: "https://easy-trip.lexiechoi.com",
     backendGithubUrl: "https://github.com/lexiechoi852/easy-trip-laravel",
     frontendGithubUrl: "https://github.com/lexiechoi852/easy-trip-next",
-    workInProgress: true,
+    workInProgress: false,
     stacks: ["Next.js", "Redux", "Laravel"],
   },
   {
