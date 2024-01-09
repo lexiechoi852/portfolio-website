@@ -7,7 +7,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lexie Choi",
+  title: "Lexie Choi | Software Engineer",
   description: "Welcome to Lexie Choi's developer portfolio!",
 };
 
