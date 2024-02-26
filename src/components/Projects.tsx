@@ -28,6 +28,16 @@ const projects: Project[] = [
     workInProgress: false,
     stacks: ["Next.js", "TailwindCSS", "Express.js"],
   },
+  {
+    name: "Chat App",
+    image: "/chat-app-screenshot.png",
+    description:
+      "Real time chat website allow users to have one-on-one chat and group chat. After login, ",
+    // liveSite: "https://chat-app.lexiechoi.com",
+    githubUrl: "https://github.com/lexiechoi852/chat-app",
+    workInProgress: false,
+    stacks: ["React", "Redux", "Nest.js", "Socket.IO", "Mongoose"],
+  },
 ];
 export default function Projects() {
   return (
