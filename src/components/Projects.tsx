@@ -32,7 +32,7 @@ const projects: Project[] = [
     name: "Chat App",
     image: "/chat-app-screenshot.png",
     description:
-      "Real time chat website allow users to have one-on-one chat and group chat. After login, ",
+      "Real time chat website allow users to have one-on-one chat and group chat. ",
     // liveSite: "https://chat-app.lexiechoi.com",
     githubUrl: "https://github.com/lexiechoi852/chat-app",
     workInProgress: false,
