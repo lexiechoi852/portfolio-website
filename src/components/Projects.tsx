@@ -11,7 +11,7 @@ const projects: Project[] = [
     image: "/easy-trip-screenshot.png",
     description:
       "Trip planning website allow you plan your trip in Toronto. By adding attractions, arranging your schedule using calendar view, users can get an itinerary with travel time estimation and routes information.",
-    liveSite: "https://easy-trip.lexiechoi.com",
+    // liveSite: "https://easy-trip.lexiechoi.com",
     backendGithubUrl: "https://github.com/lexiechoi852/easy-trip-laravel",
     frontendGithubUrl: "https://github.com/lexiechoi852/easy-trip-next",
     workInProgress: false,
