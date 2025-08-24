@@ -15,28 +15,28 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+    "next": "^14.2.32",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "latest",
+    "@types/node": "^20.8.0",
     "@types/react": "latest",
-    "@types/react-dom": "latest",
+    "@types/react-dom": "^18.2.8",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-config-next": "latest",
+    "eslint-config-next": "^14.2.32",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-tailwindcss": "^3.13.0",
+    "husky": "^8.0.0",
     "postcss": "latest",
     "prettier": "^3.0.3",
-    "tailwindcss": "latest",
-    "typescript": "latest",
-    "husky": "^8.0.0"
+    "tailwindcss": "^3.4.10",
+    "typescript": "latest"
   }
 }
