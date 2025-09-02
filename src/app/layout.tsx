@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
       ) : null}
       <body className={openSans.className}>{children}</body>
       <SpeedInsights />
+      <Analytics />
     </html>
   );
 }
