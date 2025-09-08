@@ -25,9 +25,11 @@ export default function RootLayout({
           measurementId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}
         />
       ) : null}
-      <body className={openSans.className}>{children}</body>
-      <SpeedInsights />
-      <Analytics />
+      <body className={openSans.className}>
+        {children}
+        <SpeedInsights />
+        <Analytics />
+      </body>
     </html>
   );
 }

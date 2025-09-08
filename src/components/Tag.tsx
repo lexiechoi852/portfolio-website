@@ -6,10 +6,10 @@ interface TagProps {
 }
 
 export default function Tag({ stack, component }: TagProps) {
-  const generateClassName = (component: string) => {
+  const generateClassName = (c: string) => {
     let className =
       "inline-flex items-center rounded-full bg-blue-200 px-3 py-1 text-sm font-bold uppercase text-blue-700";
-    if (component === "projects") {
+    if (c === "projects") {
       className =
         "inline-flex items-center rounded-full bg-green-200 px-3 py-1 text-sm font-bold uppercase text-green-700";
       return className;
