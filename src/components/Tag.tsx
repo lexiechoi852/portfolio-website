@@ -1,11 +1,13 @@
 import React from "react";
 
+import type { JSX } from "react";
+
 interface TagProps {
   stack: string;
   component: string;
 }
 
-export default function Tag({ stack, component }: TagProps) {
+const Tag = ({ stack, component }: TagProps): JSX.Element => {
   const generateClassName = (c: string) => {
     let className =
       "inline-flex items-center rounded-full bg-blue-200 px-3 py-1 text-sm font-bold uppercase text-blue-700";
@@ -21,4 +23,6 @@ export default function Tag({ stack, component }: TagProps) {
       {stack}
     </div>
   );
-}
+};
+
+export default Tag;

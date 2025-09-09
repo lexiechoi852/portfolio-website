@@ -1,47 +1,53 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
-import HamburgerMenuIcon from "./icons/HamburgerMenuIcon";
-import CloseIcon from "./icons/CloseIcon";
 
-export default function HamburgerMenu() {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+import Link from "next/link";
+
+import CloseIcon from "./icons/CloseIcon";
+import HamburgerMenuIcon from "./icons/HamburgerMenuIcon";
+
+import type { JSX } from "react";
+
+const HamburgerMenu = (): JSX.Element => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div>
       {!isMenuOpen && (
         <button
-          type="button"
           aria-label="hamburger menu"
-          onClick={() => setMenuOpen(true)}
+          onClick={() => setIsMenuOpen(true)}
+          type="button"
         >
           <HamburgerMenuIcon />
         </button>
       )}
-      {isMenuOpen && (
+      {isMenuOpen ? (
         <div className="relative">
           <button
-            type="button"
             aria-label="close"
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setIsMenuOpen(false)}
+            type="button"
           >
             <CloseIcon />
           </button>
           <div className="absolute right-0 z-10 flex flex-col text-gray-600">
             <Link href="#experience">
-              <button type="button" onClick={() => setMenuOpen(false)}>
+              <button onClick={() => setIsMenuOpen(false)} type="button">
                 Experience
               </button>
             </Link>
             <Link href="#projects">
-              <button type="button" onClick={() => setMenuOpen(false)}>
+              <button onClick={() => setIsMenuOpen(false)} type="button">
                 Projects
               </button>
             </Link>
           </div>
         </div>
-      )}
+      ) : null}
     </div>
   );
-}
+};
+
+export default HamburgerMenu;
