@@ -2,9 +2,8 @@ import path from "node:path";
 
 import { includeIgnoreFile } from "@eslint/compat";
 import js from "@eslint/js";
-import { configs } from "eslint-config-airbnb-extended/legacy";
+import { configs, plugins, rules } from "eslint-config-airbnb-extended";
 import { rules as prettierConfigRules } from "eslint-config-prettier";
-import nextPlugin from "@next/eslint-plugin-next";
 import prettierPlugin from "eslint-plugin-prettier";
 
 const gitignorePath = path.resolve(".", ".gitignore");
@@ -27,30 +26,40 @@ const jsConfig = [
       },
     },
   },
-];
-
-const reactConfig = [
-  // Airbnb React Recommended Config
-  ...configs.react.recommended,
-  // Airbnb React Hooks Config
-  ...configs.react.hooks,
-];
-
-const typescriptConfig = [
-  // Airbnb React TypeScript Config
-  ...configs.react.typescript,
+  // Stylistic Plugin
+  plugins.stylistic,
+  // Import X Plugin
+  plugins.importX,
+  // Airbnb Base Recommended Config
+  ...configs.base.recommended,
+  // Strict Import Config
+  rules.base.importsStrict,
 ];
 
 const nextConfig = [
-  {
-    name: "next/config",
-    plugins: {
-      "@next/next": nextPlugin,
-    },
-    rules: {
-      ...nextPlugin.configs.recommended.rules,
-    },
-  },
+  // React Plugin
+  plugins.react,
+  // React Hooks Plugin
+  plugins.reactHooks,
+  // React JSX A11y Plugin
+  plugins.reactA11y,
+  // Next Plugin
+  plugins.next,
+  // Airbnb Next Recommended Config
+  ...configs.next.recommended,
+  // Strict React Config
+  rules.react.strict,
+];
+
+const typescriptConfig = [
+  // TypeScript ESLint Plugin
+  plugins.typescriptEslint,
+  // Airbnb Base TypeScript Config
+  ...configs.base.typescript,
+  // Strict TypeScript Config
+  rules.typescript.typescriptEslintStrict,
+  // Airbnb Next TypeScript Config
+  ...configs.next.typescript,
 ];
 
 const prettierConfig = [
@@ -76,12 +85,10 @@ export default [
   includeIgnoreFile(gitignorePath),
   // Javascript Config
   ...jsConfig,
-  // React Config
-  ...reactConfig,
+  // Next Config
+  ...nextConfig,
   // TypeScript Config
   ...typescriptConfig,
-  // Next.js Config
-  ...nextConfig,
   // Prettier Config
   ...prettierConfig,
 ];

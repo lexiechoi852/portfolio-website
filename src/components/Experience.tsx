@@ -1,6 +1,9 @@
 import React from "react";
-import Tag from "./Tag";
+
 import Navigation from "./Navigation";
+import Tag from "./Tag";
+
+import type { JSX } from "react";
 
 const experiences = [
   {
@@ -20,37 +23,36 @@ const experiences = [
     stacks: ["Angular", "WorkPress", "SCSS", "Nest.js"],
   },
 ];
-export default function Experience() {
-  return (
-    <section id="experience" className="relative min-h-[calc(96dvh)] p-[4vh]">
-      <h2 className="mb-2 text-center text-5xl font-bold text-gray-700">
-        Experience
-      </h2>
-      <div className="flex flex-col items-center justify-center gap-20">
-        {experiences.map((experience) => (
-          <div
-            key={experience.title}
-            className="flex w-full flex-col lg:flex-row"
-          >
-            <div className="min-w-[150px]">{experience.duration}</div>
-            <div className="flex flex-col lg:ml-20">
-              <h3 className="text-2xl font-bold text-gray-800">
-                {experience.title}
-              </h3>
-              <div className="text-xl font-semibold text-gray-800">
-                {experience.companyName}
-              </div>
-              <p className="mt-2 text-gray-800">{experience.description}</p>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {experience.stacks.map((stack) => (
-                  <Tag key={stack} stack={stack} component="experience" />
-                ))}
-              </div>
+const Experience = (): JSX.Element => (
+  <section className="relative min-h-[calc(96dvh)] p-[4vh]" id="experience">
+    <h2 className="mb-2 text-center text-5xl font-bold text-gray-700">
+      Experience
+    </h2>
+    <div className="flex flex-col items-center justify-center gap-20">
+      {experiences.map((experience) => (
+        <div
+          key={experience.title}
+          className="flex w-full flex-col lg:flex-row"
+        >
+          <div className="min-w-[150px]">{experience.duration}</div>
+          <div className="flex flex-col lg:ml-20">
+            <h3 className="text-2xl font-bold text-gray-800">
+              {experience.title}
+            </h3>
+            <div className="text-xl font-semibold text-gray-800">
+              {experience.companyName}
+            </div>
+            <p className="mt-2 text-gray-800">{experience.description}</p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {experience.stacks.map((stack) => (
+                <Tag key={stack} component="experience" stack={stack} />
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-      <Navigation href="#projects" />
-    </section>
-  );
-}
+        </div>
+      ))}
+    </div>
+    <Navigation href="#projects" />
+  </section>
+);
+export default Experience;
