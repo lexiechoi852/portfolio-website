@@ -18,6 +18,7 @@ const Tag = ({ stack, component }: TagProps): JSX.Element => {
     }
     return className;
   };
+
   return (
     <div key={stack} className={generateClassName(component)}>
       {stack}

@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import GithubIcon from "./icons/GithubIcon";
 import LinkedInIcon from "./icons/LinkedInIcon";
+import Navigation from "./Navigation";
 
 import type { JSX } from "react";
 
@@ -46,6 +47,7 @@ const Profile = (): JSX.Element => (
         </Link>
       </div>
     </div>
+    <Navigation href="#experience" />
   </section>
 );
 

@@ -46,7 +46,7 @@ const projects: Project[] = [
 ];
 const Projects = (): JSX.Element => (
   <section
-    className="relative flex min-h-[calc(96dvh)] flex-col gap-10 p-[4vh]"
+    className="relative flex min-h-[calc(100dvh)] flex-col gap-10 p-[4vh]"
     id="projects"
   >
     <h2 className="mb-2 text-center text-5xl font-bold text-gray-700">
