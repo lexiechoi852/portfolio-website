@@ -13,9 +13,9 @@ interface NavigationProps {
 
 const Navigation = ({ href }: NavigationProps): JSX.Element => {
   const generateClassName = (h: string) => {
-    let className = "absolute bottom-10 right-0 flex flex-col gap-10";
+    let className = "absolute bottom-10 right-0 lg:flex flex-col gap-10 hidden";
     if (h === "#experience") {
-      className = "absolute bottom-20 right-0 flex flex-col gap-10";
+      className = "absolute bottom-20 right-0 lg:flex flex-col gap-10 hidden";
       return className;
     }
     return className;

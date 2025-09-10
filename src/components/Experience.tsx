@@ -25,7 +25,7 @@ const experiences = [
 ];
 const Experience = (): JSX.Element => (
   <section className="relative min-h-[calc(100dvh)] p-[4vh]" id="experience">
-    <h2 className="mb-2 text-center text-5xl font-bold text-gray-700">
+    <h2 className="mb-4 text-center text-5xl font-bold text-gray-700">
       Experience
     </h2>
     <div className="flex flex-col items-center justify-center gap-20">
