@@ -11,17 +11,30 @@ interface NavigationProps {
   href: string;
 }
 
-const Navigation = ({ href }: NavigationProps): JSX.Element => (
-  <div className="absolute bottom-10 right-0 flex flex-col gap-10">
-    <Link aria-label="top section" href="#top">
-      <UpIcon />
-    </Link>
-    {href !== "#profile" && (
-      <Link aria-label="next section" href={href}>
-        <DownIcon />
-      </Link>
-    )}
-  </div>
-);
+const Navigation = ({ href }: NavigationProps): JSX.Element => {
+  const generateClassName = (h: string) => {
+    let className = "absolute bottom-10 right-0 flex flex-col gap-10";
+    if (h === "#experience") {
+      className = "absolute bottom-20 right-0 flex flex-col gap-10";
+      return className;
+    }
+    return className;
+  };
+
+  return (
+    <div className={generateClassName(href)}>
+      {href !== "#experience" && (
+        <Link aria-label="top section" href="#top">
+          <UpIcon />
+        </Link>
+      )}
+      {href !== "#profile" && (
+        <Link aria-label="next section" href={href}>
+          <DownIcon />
+        </Link>
+      )}
+    </div>
+  );
+};
 
 export default Navigation;
